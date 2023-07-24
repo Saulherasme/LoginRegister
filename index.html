@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login y Registro</h2>
+        <div id="loginform">
+            <h3>Login</h3>
+            <form onsubmit="return loginUser()">
+                <div>
+                    <input type="text" placeholder="username" id="loginUsername">
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder="password" id="loginPassord">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>No tienes una cuenta? <a href="#" onclick="toggleForm()">Registrate aqui</a></p>
+        </div>
+
+        
+
+        <div id="registerForm" style="display: none;">
+            <h3>Registrar</h3>
+            <form onsubmit="return registrarUser()">
+                <div>
+                    <input type="text" placeholder="username" id="registrarUsername">
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder="password" id="RegistrarPassword">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Ya tienes una cuenta? <a href="#" onclick="toggleForm()">Login here</a></p>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
